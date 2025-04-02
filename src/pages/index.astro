@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro'
+import ReactGreeting from '../components/react'
+import VueGreeting from '../components/vue/Greeting.vue'
+import SvelteGreeting from '../components/svelte/Greeting.svelte'
+import { Greeting as SolidGreeting } from '../components/solid/Greeting'
+---
+
+<Layout title="多框架组件演示">
+  <main class="p-8">
+    <h1 class="text-3xl font-bold mb-8">多框架组件演示</h1>
+    
+    <div class="space-y-8">
+      <section>
+        <h2 class="text-xl font-semibold mb-4">React 组件</h2>
+        <div class="p-4 border rounded">
+          <ReactGreeting client:only="react" />
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mb-4">Vue 组件</h2>
+        <div class="p-4 border rounded">
+          <VueGreeting client:only="vue" />
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mb-4">Svelte 组件</h2>
+        <div class="p-4 border rounded">
+          <SvelteGreeting client:only="svelte" />
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mb-4">Solid.js 组件</h2>
+        <div class="p-4 border rounded">
+          <SolidGreeting client:only="solid-js" />
+        </div>
+      </section>
+    </div>
+  </main>
+</Layout> 
