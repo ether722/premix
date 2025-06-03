@@ -2,6 +2,9 @@ Tailwind一套样式支持pc和m
 
 
 
+注册keybroad
+配置数据 比如chain、city之类的
+
 
 基于zustand封装 自动进行配套和页面数据联动匹配
 
